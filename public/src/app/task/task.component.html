@@ -1,0 +1,10 @@
+<div *ngIf="showOneCake._id" class="container col-8">
+    <div class="col-6" style="display:inline-block;">
+        <h3>Baker: {{showOneCake.baker}}</h3>
+        <img [src]="showOneCake.photo" style="height:300px;">
+    </div>
+    <div class="col-6" style="display:inline-block;">
+        <p *ngIf="showOneCake.rating > 0">Average Rating: {{ showOneCake.rating }}</p>
+        <p *ngFor="let comment of showOneCake.comments">Comments: {{ comment }}</p>
+    </div>
+</div>
